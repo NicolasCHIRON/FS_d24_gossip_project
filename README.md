@@ -26,4 +26,4 @@ Creating an app that will revolutionize medical appointments !
 
 ## Requirements
 
-Ruby 3.0.0
+Ruby 3.0.0  
