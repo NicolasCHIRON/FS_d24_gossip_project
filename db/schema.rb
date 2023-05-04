@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_04_133140) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_04_165255) do
   create_table "cities", force: :cascade do |t|
     t.string "name"
     t.string "zip_code"
@@ -33,7 +33,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_04_133140) do
     t.integer "gossip_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "parent_comment_id"
     t.index ["gossip_id"], name: "index_comments_on_gossip_id"
+    t.index ["parent_comment_id"], name: "index_comments_on_parent_comment_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
@@ -92,4 +94,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_04_133140) do
     t.index ["city_id"], name: "index_users_on_city_id"
   end
 
+  add_foreign_key "comments", "comments", column: "parent_comment_id"
 end

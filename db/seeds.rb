@@ -25,7 +25,16 @@ end
 end
 
 20.times do
-  Comment.create!(content: Faker::Fantasy::Tolkien.poem, user_id: User.all.sample.id, gossip_id: Gossip.all.sample.id)
+  gossip = Gossip.all.sample # On choisit un gossip au hasard
+  comment = Comment.create!(content: Faker::Fantasy::Tolkien.poem, user_id: User.all.sample.id, gossip_id: gossip.id) # On créé un commentaire sur ce gossip
+  rand(1..3).times do #Pour chaque commentaire créé, il crée également un certain nombre de commentaires enfants (déterminé au hasard entre 1 et 3).
+    child_comment = Comment.create!(content: Faker::Lorem.paragraph_by_chars(number: 140), user_id: User.all.sample.id, parent_comment_id: comment.id, gossip_id: gossip.id
+    )
+    comment.gossip = gossip
+    child_comment.gossip = gossip
+    child_comment.save
+    #Une fois que le commentaire enfant est créé, le code associe le gossip d'origine à la fois au commentaire parent et au commentaire enfant avant de sauvegarder le commentaire enfant.
+  end
 end
 
 20.times do
