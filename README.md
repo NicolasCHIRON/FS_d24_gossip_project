@@ -28,6 +28,14 @@ It's like Facebook but only with gossips! You will enjoy this !
 
 * Do the test (`tp Doctor.all`, `tp Patient.all`, `tp Appointment.all` (or .last)
 
+
+## Authors
+
+- [@gregimbeau](https://github.com/gregimbeau/)
+- [@NicolasCHIRON](https://github.com/NicolasCHIRON/)
+- [@NicolasVADELORGE](https://github.com/NicolasVdev/)
+
+
 ## Requirements
 
 Ruby 3.0.0  
