@@ -1,1 +1,33 @@
-# d24_gossip_project
+# The Gossip Project
+[![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/as-seen-on-tv.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-coffee.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-crayons.svg)](https://forthebadge.com)
+
+
+### THP W5 D4
+
+Learning RoR(Ruby on Rails) and our first database
+It's like Facebook but only with gossips! You will enjoy this !
+
+* Creating and modeling our models
+* Managing migration to play with our tables
+
+## Installation
+
+
+* 'Git clone' #cloning this repo
+* `bundle install` #installing the Ruby's gems
+
+
+## Usage
+
+* `rails db:migrate` #put all database tables to up status
+* `rails db:seed` #generating a random database with faker's gem
+* `rails c` #turning on the console
+
+* Do the test (`tp Doctor.all`, `tp Patient.all`, `tp Appointment.all` (or .last)
+
+## Requirements
+
+Ruby 3.0.0  
