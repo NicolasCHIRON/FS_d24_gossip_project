@@ -26,7 +26,11 @@ It's like Facebook but only with gossips! You will enjoy this !
 * `rails db:seed` #generating a random database with faker's gem
 * `rails c` #turning on the console
 
-* Do the test (`tp Doctor.all`, `tp Patient.all`, `tp Appointment.all` (or .last)
+* Do the test (`tp Comment.all `, `tp User.all`, `tp Gossip.all`, `tp Tag.all`, `tp GossipLike.all`, `tp CommentLike.all` (or .last)
+
+## Bonus Test
+
+* Do `tp Comment.where.not(parent_comment_id: nil)`
 
 
 ## Authors
